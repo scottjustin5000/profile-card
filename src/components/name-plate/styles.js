@@ -18,9 +18,17 @@ const LastName = styled.div`
   font-weight: 600;
 `
 
+const DetailWrapper = styled.div`
+  font-size: ${props => props.fontSize}px;
+  display: flex;
+  margin-top: -4px;
+  justify-content: center;
+  align-items: center;
+`
 export {
   PlateWrapper,
   NameWrapper,
   FirstName,
-  LastName
+  LastName,
+  DetailWrapper
 }

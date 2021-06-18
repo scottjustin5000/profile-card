@@ -5,14 +5,18 @@ const Container = styled.div`
   flex-direction: column;
   box-sizing: border-box;
   width: 100%;
+  font-family: verdana;
+  font-size: 0.5em;
 `
 const Summary = styled.span`
   font-size: .75em;
+  padding: 8px;
 `
 
 const DetailBlock = styled.div`
-  margin: 8px 16px;
-
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 16px;
 `
 const ColumnWrapper = styled.div`
   display: flex;
@@ -28,7 +32,6 @@ const Key = styled.label`
   font-weight: bold;
   flex: 1 1 0%;
 `
-
 const Value = styled.label`
   display: flex;
   margin: 0px;

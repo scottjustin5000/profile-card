@@ -8,9 +8,6 @@ const TableBase = styled.table`
   max-width: ${props => props.maxWidth || 'unset'}
 `
 const TableRow = styled.tr`
-  position: ${props => props.position};
-  top: ${props => props.top};
-  left: ${props => props.left};
   cursor: ${props => props.cursor};
   :nth-child(even) {
     background-color: ${props =>  props.bgcolor || '#F6F7FA'};
@@ -22,7 +19,6 @@ const TableRow = styled.tr`
   ` : ''};
   overflow-x: ${props => props.overflowX || ''};
 `
-
 const Th = styled.th`
   cursor: ${props => props.cursor || 'pointer'};
   padding: 4px;
@@ -34,20 +30,8 @@ const Th = styled.th`
   :last-child {
     width: 100%;
   }
-  ${props => props.stick ? `
-    position: absolute;
-    top: auto;
-    left: 0;
-    width: 28px;
-    height: 21px;
-    white-space: unset;
-    text-align: left;
-    backface-visibility: hidden;
-    background: #fff;
-    word-wrap: break-word;
-    word-break: break-word;
-    overflow-wrap: break-word;
-  ` : ''};
+  position: sticky;
+  top: 0;
 `
 
 const Td = styled.td`
@@ -60,21 +44,6 @@ const Td = styled.td`
   :last-child {
     width: 100%;
   }
-
-  ${props => props.stick ? `
-    position: absolute;
-    top: auto;
-    left: 0;
-    width: 28px;
-    height: 26px;
-    white-space: unset;
-    text-align: left;
-    backface-visibility: hidden;
-    background: #fff;
-    word-wrap: break-word;
-    word-break: break-word;
-    overflow-wrap: break-word;
-  ` : ''};
 `
 export {
   TableBase,

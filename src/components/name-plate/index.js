@@ -4,10 +4,10 @@ import {
   PlateWrapper,
   NameWrapper,
   FirstName,
-  LastName
+  LastName,
+  DetailWrapper
 } from './styles'
-//image 50 % of height
-//spacing 25 % of image height
+
 const NamePlate = (props) => {
 const compressor = 1
 const compressor2 = 1.2
@@ -17,22 +17,17 @@ const fontSize =  Math.max(Math.min(props.width / (compressor*10), parseFloat(ma
 const bottomLine = Math.max(Math.min(props.width / (compressor2*10), parseFloat(maxFontSize)), parseFloat(minFontSize))
   return (
    <PlateWrapper height={props.height}>
-     <NameWrapper fontSize={fontSize}>
-    <FirstName>
-      {props.firstName}
+    <NameWrapper fontSize={fontSize}>
+      <FirstName>
+        {props.firstName}
       </FirstName> 
       <LastName>
         {props.lastName}
-        </LastName>
+      </LastName>
     </NameWrapper>
-    <div style={{fontSize:`${bottomLine}px`, display:'flex', justifyContent:'center', alignItems: 'center'}}> 
-    #23 Short Stop
-    </div>
-      <div> 
-        <img 
-        style={{objectFit:'contain', width: '40%', position: 'absolute', top: '5px', right:'2px', opacity:'.4'}} 
-        src='https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/sd.png' />
-    </div>
+    <DetailWrapper fontSize={bottomLine}> 
+    #{props.number} {props.position}
+    </DetailWrapper>
   </PlateWrapper>
   )
 }

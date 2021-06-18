@@ -11,6 +11,7 @@ const Polaroid = styled.div`
   transform-style: preserve-3d;
   cursor: pointer;
   position: relative;
+  font-family: 'Shadows Into Light', cursive;
 `
 
 const Card = styled.div`
@@ -51,10 +52,47 @@ const Picture = styled.img`
   object-fit: contain;
 `
 
+const StatPanel = styled.div`
+  background-color: #ffffff;
+  font-size: 10px; 
+  overflow: auto; 
+  max-height: ${props => props.maxHeight}px;
+`
+
+const TabWrapper = styled.div`
+  font-family: verdana; 
+  font-size: 0.4em; 
+  transform: translate3d(0,0,0);
+`
+
+const BackHeader = styled.div`
+  display: flex; 
+  flex-direction: column;
+`
+
+const Name = styled.div`
+  display: flex;
+  justify-content: center;
+`
+
+const TeamLogo = styled.img`
+  object-fit: contain;
+  width: 40%;
+  position: absolute;
+  top: 5px;
+  right: 2px;
+  opacity: .4;
+`
+
 export {
   Card,
   Front,
   Back,
   Polaroid,
-  Picture
+  Picture,
+  StatPanel,
+  TabWrapper,
+  BackHeader,
+  Name,
+  TeamLogo
 }
